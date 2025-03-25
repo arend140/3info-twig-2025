@@ -14,12 +14,8 @@ Página de compras
     {% for compra in compras %}
 
         <li>{{ compra.item }} 
+            <a href=compras_edi.php?id={{ compra.id }}>Editar</a>
             <a href=compras_apa.php?id={{ compra.id }}>Apagar</a> 
-        <form action="compras_edi.php" method="POST">
-            <input type="hidden" name="id" value={{ compra.id }}>
-            <input type="text" name="item">
-            <input type="submit" value="Editar">
-        </form>
         </li>
         
 
