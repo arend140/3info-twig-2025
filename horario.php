@@ -11,6 +11,7 @@ Deverá mostrar a data de hoje e a data de amanhã
 */
 
 echo $twig->render("horario.html", [
+    'titulo' => "Horário",
     'hoje_dia' => Carbon::now()->day,
     'hoje_mes' => Carbon::now()->month,
     'hoje_ano' => Carbon::now()->year,
