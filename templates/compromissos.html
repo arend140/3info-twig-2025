@@ -12,20 +12,22 @@ Página de Compromissos
 
 <h3>Minha lista de compromissos</h3>
 
-<form action="" method="post">
+<form action="compromissos.php" method="post">
     <label for="ordenar">Ordenar por</label>
-    <select id="ordenar" name="ordenar">
-        <option value="antigo">Mais antigos</option>
-        <option value="novo">Mais novos</option>
-        <option value="data">Data mais próxima</option>
-    </select>
+    <br>
+    <input type="radio" name="ordenar" id="menor" value="menor">
+    <label for="menor">Menor data</label>
+    <br>
+    <input type="radio" name="ordenar" id= "maior" value="maior">
+    <label for="maior">Maior data</label>
+    <br>
     <input type="submit" value="Ordenar">
 </form>
 
 <ul>
     {% for compromisso in compromissos %}
 
-        <li>{{ compromisso.titulo }} - {{ compromisso.data }} {{ final_semana }}
+        <li>{{ compromisso.titulo }} - {{ compromisso.data }} {{ compromisso.final_semana }}
             <a href="compromissos_edi.php?id={{ compromisso.id }}">Editar</a>
             <a href="compromissos_apa.php?id={{ compromisso.id }}">Apagar</a> 
         </li>

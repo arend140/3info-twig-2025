@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Mar-2025 às 14:44
+-- Tempo de geração: 01/04/2025 às 01:52
 -- Versão do servidor: 10.4.32-MariaDB
--- versão do PHP: 8.2.12
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,34 +24,45 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `compromissos`
+-- Estrutura para tabela `compromissos`
 --
 
 CREATE TABLE `compromissos` (
   `id` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
-  `data` date NOT NULL
+  `data` date NOT NULL,
+  `final_semana` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `compromissos`
+--
+
+INSERT INTO `compromissos` (`id`, `titulo`, `data`, `final_semana`) VALUES
+(7, 'Aniversário Lívia', '2025-12-28', 'Final de Semana'),
+(10, 'Aniversário Bruno', '2025-08-07', ''),
+(12, 'Aniversário Ana', '2025-02-20', ''),
+(13, 'ad', '4042-02-20', '');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `compromissos`
+-- Índices de tabela `compromissos`
 --
 ALTER TABLE `compromissos`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `compromissos`
 --
 ALTER TABLE `compromissos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

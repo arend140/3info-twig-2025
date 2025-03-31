@@ -2,7 +2,9 @@
 require('inc/banco.php');
 
 require_once('twig_carregar.php');
-require('inc/banco.php');
+date_default_timezone_set('America/Sao_Paulo');
+
+use Carbon\Carbon;
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         // Get = Visualizar o formulário
@@ -20,10 +22,17 @@ require('inc/banco.php');
         }
     }else{
     //POST = Gravar os dados
-        $edit = $pdo->prepare('UPDATE compromissos SET titulo = :titulo, data = :data WHERE id = :id');
+        $final_semana;
+        if(Carbon::parse($_POST['data'])->isWeekend()){
+            $final_semana = "Final de Semana";
+        }else{
+            $final_semana = "";
+        }
+        $edit = $pdo->prepare('UPDATE compromissos SET titulo = :titulo, data = :data, final_semana = :final_semana WHERE id = :id');
         $edit->execute([
             ':titulo' => $_POST['titulo'],
             ':data' => $_POST['data'],
+            ':final_semana' => $final_semana,
             ':id' => $_POST['id'],
         ]);
 
