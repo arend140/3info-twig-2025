@@ -2,6 +2,7 @@
 
 require_once('twig_carregar.php');
 require('inc/banco.php');
+require('verifica_session.php');
 
 if(isset($_POST['ordenar']) && $_POST['ordenar']=='maior'){
     $dados = $pdo->query('SELECT * FROM compromissos ORDER BY data DESC');
