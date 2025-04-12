@@ -1,6 +1,5 @@
 <?php
 require('inc/banco.php');
-require('verifica_session.php');
 
 $item = $_POST['item'] ?? null;
 

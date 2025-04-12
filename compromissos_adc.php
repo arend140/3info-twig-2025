@@ -2,7 +2,6 @@
 require_once('twig_carregar.php');
 require('inc/banco.php');
 date_default_timezone_set('America/Sao_Paulo');
-require('verifica_session.php');
 
 use Carbon\Carbon;
 
