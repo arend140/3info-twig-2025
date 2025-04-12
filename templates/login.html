@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Twig</title>
+</head>
+<body>
+    <h1>Super site Twig Master</h1>
+    {% if titulo %}
+    <h2> {{ titulo }}</h2>
+    {% endif %}
+    <form action="login.php" method="post">
+        <input type="text" name="login" placeholder="Login:">
+        <br>
+        <input type="password" name="senha" placeholder="Senha:">
+        <br>
+        <input type="submit">
+    </form>
+    <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
+</body>
+</html>

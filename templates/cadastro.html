@@ -10,15 +10,13 @@
     {% if titulo %}
     <h2> {{ titulo }}</h2>
     {% endif %}
-    <hr>
-    <a href="index.php">Inicial</a>
-    <a href="compras.php">Compras</a>
-    <a href="horario.php">Horário</a>
-    <a href="compromissos.php">Compromissos</a>
-    <a href="deslogar.php">Sair</a>
-    <hr>
-
-    {% block conteudo %}{% endblock %}
-
+    <form action="cadastrar.php" method="post">
+        <input type="text" name="login" placeholder="Login:">
+        <br>
+        <input type="password" name="senha" placeholder="Senha:">
+        <br>
+        <input type="submit">
+    </form>
+    <p>Já tem uma conta? <a href="login.php">Logar</a></p>
 </body>
 </html>

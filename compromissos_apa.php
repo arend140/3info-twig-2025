@@ -1,5 +1,6 @@
 <?php
 require('inc/banco.php');
+require_once('verifica_session.php');
 
 $id = $_GET['id'] ?? null;
 

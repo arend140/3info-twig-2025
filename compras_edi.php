@@ -2,6 +2,7 @@
 require('inc/banco.php');
 
 require_once('twig_carregar.php');
+require_once('verifica_session.php');
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         // Get = Visualizar o formulário

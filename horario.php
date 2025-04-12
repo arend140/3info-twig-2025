@@ -1,7 +1,9 @@
 <?php
 
 require('twig_carregar.php');
+require_once('verifica_session.php');
 date_default_timezone_set('America/Sao_Paulo');
+
 
 use Carbon\Carbon;
 
