@@ -14,5 +14,6 @@ $comp = $dados->fetchAll(PDO::FETCH_ASSOC);
 
 echo $twig->render('compromissos.html', [
     'titulo' => 'Compromissos',
-    'compromissos' => $comp
+    'compromissos' => $comp,
+    'usuario' => $_SESSION["login"]
 ]);

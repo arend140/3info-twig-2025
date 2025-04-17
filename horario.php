@@ -19,7 +19,8 @@ echo $twig->render("horario.html", [
     'hoje_ano' => Carbon::now()->year,
     'amanha_dia' => Carbon::now()->addDay()->day,
     'amanha_mes' => Carbon::now()->addDay()->month,
-    'amanha_ano' => Carbon::now()->addDay()->year
+    'amanha_ano' => Carbon::now()->addDay()->year,
+    'usuario' => $_SESSION["login"]
 ]);
 
 ?>

@@ -5,4 +5,5 @@ require_once('verifica_session.php');
 
 echo $twig->render("index.html", [
     'fruta' => 'Abacaxi',
+    'usuario' => $_SESSION["login"]
 ]);

@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+{% block conteudo %}
+
+<form action="senha.php" method="post">
+    <input required type="password" name="atual" placeholder="Senha atual">
+    <br>
+    <input required type="password" name="nova" placeholder="Senha nova">
+    <br>
+    <input required type="password" name="confirmar" placeholder="Confirmar senha">
+    <br>
+    <input type="submit">
+
+</form>
+
+
+{% endblock %}
